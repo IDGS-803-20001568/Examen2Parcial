@@ -1,0 +1,140 @@
+/* Fondo general de la aplicación */
+body, html, #root, .App {
+  height: 100%;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+.App {
+  background-image: url('./pizzeria.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    box-sizing: border-box;
+    height: 100%;
+    width: 201%;
+}
+
+/* Contenedor principal con un fondo semi-transparente */
+.pizzeria-container {
+  display: flex;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  max-width: 900px;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Formulario */
+.pizzeria-form {
+  flex: 1;
+  padding: 30px;
+  box-sizing: border-box;
+  border-right: 1px solid #ddd;
+}
+
+.pizzeria-form h2 {
+  text-align: center;
+  color: #d35400;
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+.pizzeria-form div {
+  margin-bottom: 15px;
+}
+
+.pizzeria-form label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+  font-weight: bold;
+}
+
+.pizzeria-form select, 
+.pizzeria-form input[type="radio"] {
+  margin-right: 10px;
+}
+
+.pizzeria-form input[type="radio"] + label {
+  margin-right: 15px;
+  color: #555;
+}
+
+.pizzeria-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pizzeria-form button:hover {
+  background-color: #c0392b;
+}
+
+.pizzeria-form h3 {
+  text-align: center;
+  color: #27ae60;
+  margin-top: 20px;
+  font-size: 1.5em;
+}
+
+/* Menú de Pizzas */
+.pizza-menu {
+  flex: 1;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.pizza-menu h2 {
+  text-align: center;
+  color: #d35400;
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+.pizza-menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.pizza-menu li {
+  background: #f39c12;
+  color: white;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  font-size: 1.1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pizza-menu li strong {
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .pizzeria-container {
+    flex-direction: column;
+  }
+
+  .pizzeria-form {
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .pizza-menu {
+    padding: 20px;
+  }
+}
