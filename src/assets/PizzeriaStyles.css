@@ -11,12 +11,12 @@ body, html, #root, .App {
   background-position: center;
   background-repeat: no-repeat;
   display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 50px;
-    box-sizing: border-box;
-    height: 100%;
-    width: 201%;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  box-sizing: border-box;
+  height: 100%;
+  width: 201%;
 }
 
 /* Contenedor principal con un fondo semi-transparente */
@@ -87,6 +87,48 @@ body, html, #root, .App {
   color: #27ae60;
   margin-top: 20px;
   font-size: 1.5em;
+}
+
+/* Estilos para checkboxes de ingredientes */
+.pizzeria-form input[type="checkbox"] {
+  display: none;
+}
+
+.pizzeria-form input[type="checkbox"] + label {
+  display: inline-block;
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+  font-size: 1.1em;
+  color: #555;
+  user-select: none;
+}
+
+/* Caja del checkbox personalizada */
+.pizzeria-form input[type="checkbox"] + label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #d35400;
+  background-color: white;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.pizzeria-form input[type="checkbox"]:checked + label:before {
+  background-color: #d35400;
+}
+
+.pizzeria-form input[type="checkbox"]:checked + label:after {
+  content: "✔";
+  position: absolute;
+  left: 5px;
+  top: 0;
+  font-size: 18px;
+  color: white;
 }
 
 /* Menú de Pizzas */

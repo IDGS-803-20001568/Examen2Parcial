@@ -1,28 +1,23 @@
-import { pizzaPrices, sizePrices } from "./pizzaData";
+import { sizePrices } from "./pizzaData";
 import "../assets/PizzeriaStyles.css";
 
 const PizzaMenu = () => {
   return (
     <div className="pizza-menu">
-      <h2>Menú de Pizzas</h2>
+      <h2>Precios de Pizzas</h2>
       <ul>
-        {pizzaPrices.map((pizza, index) => (
-          <li key={index}>
-            <span>{pizza.name}</span>
-            <span>${pizza.price}</span>
-          </li>
-        ))}
-      </ul>
-      <h2>Precios por Tamaño</h2>
-      <ul>
-        {Object.keys(sizePrices).map((size, index) => (
-          <li key={index}>
-            <span>{size.charAt(0).toUpperCase() + size.slice(1)}</span>
-            <span>
-              {size === "chica" ? `$${sizePrices[size]}` : `+ $${sizePrices[size]}`}
-            </span>
-          </li>
-        ))}
+        <li>
+          <span>Chica</span>
+          <span>$ {sizePrices.chica}</span>
+        </li>
+        <li>
+          <span>Mediana</span>
+          <span>$ {sizePrices.mediana}</span>
+        </li>
+        <li>
+          <span>Grande</span>
+          <span>$ {sizePrices.grande}</span>
+        </li>
       </ul>
     </div>
   );
