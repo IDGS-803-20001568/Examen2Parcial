@@ -1,0 +1,55 @@
+/* src/pages/HomePage.css */
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  height: 100vh; /* Ocupa toda la pantalla */
+  background-color: #f0f2f5; /* Fondo suave */
+  width: 190%;
+}
+
+.home-container h1 {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.search-box {
+  width: 300px;
+  margin-bottom: 1rem;
+}
+
+.search-button {
+  width: 150px;
+}
+
+/* HomePage.css */
+
+.home-container {
+ 
+  align-items: center;
+  /* margin-left: 33%; */
+}
+
+.home-image {
+  width: 100%;
+  max-width: 300px; /* Ajusta el tamaño de la imagen */
+  height: auto;
+  margin-bottom: 1rem; /* Espacio debajo de la imagen */
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.search-box {
+  margin-bottom: 1rem;
+}
+
+.search-button {
+  margin-top: 1rem;
+}
