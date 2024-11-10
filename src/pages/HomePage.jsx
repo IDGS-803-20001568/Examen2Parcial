@@ -29,6 +29,8 @@ const HomePage = () => {
         variant="contained"
         color="primary"
         onClick={handleSearch}
+        sx={{ marginTop: '2%' }} 
+
         className="search-button"
       >
         Buscar
